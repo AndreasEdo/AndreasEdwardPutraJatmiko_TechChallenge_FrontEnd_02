@@ -1,0 +1,105 @@
+*{ /* margin 0 padding 0 karena defaultnya tidak margin 0 padding 0 */
+    margin: 0;
+    padding: 0;
+}
+
+.border{ /* buat bordernya cuma kotak yang dilebihkan dikit lalu pakai background color dan ditimpa sama containernya */
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30vw;
+    height: 32vh;
+    background-color: dodgerblue;
+}
+
+.container{/* container width nya 90% dari border yang merupakan parentnya dan 80% heightnya dari parentnya */
+
+    z-index: 1;
+    background-color: white;
+    width: 90%;
+    height: 80%;
+
+    /* menengahkan teks sama memberi padding agar textnya tidak nyentuh pojok */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* border box biar size dari kotak menyesuaikan dari teks biar tidak overflow juga */
+}
+
+.time{
+    /* untuk fontnya tidak tau jadi maafkan hehe saya asal aja size nya 3vw biar responsive sama margin bottom juga 
+    box shadow juga warnanya tidak kelihatan saya hehe */
+    font-size: 3vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 2vh;
+    box-shadow: 0 0px 10px rgb(56, 114, 221);
+
+    /* biar waktunya ditengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* widthnya 100% tapi tidak overflow karena di border-box hehe */
+    width: 100%;
+    height: 50%;
+}
+
+.buttons{
+    /* sama kayak atas */
+    width:100%;
+    height:50%;
+
+    /* menengahkan element lalu pakai nowrap biar ikut mengecil dengan parentnya */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    /* kasih gap per button */
+    gap: 2vw;
+}
+
+.buttons > button{/* styling buttonnya */
+    width: 6vw;
+    height: 6vh;
+    border: none;
+    color: white;
+
+    font-size: 1.5vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons >button[id="pause"]{/* untuk pause dikasih transisi biar smooth waktu di hover */
+    background-color: navy;
+    transition: 350ms background-color ease;
+}
+
+.buttons >button[id="pause"]:hover{/* kalau hover ganti warna*/
+    background-color: blue;
+}
+
+
+.buttons >button[id="start"]{/*  sama aja beda warna */
+    background-color: rgb(185, 41, 41);
+    transition: 350ms background-color ease;
+}
+
+.buttons >button[id="start"]:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+
+.buttons >button[id="reset"]{/*  sama aja beda warna */
+    background-color: rgb(42, 162, 34);
+    transition:  350ms background-color ease;
+}
+
+.buttons >button[id="reset"]:hover{
+    background-color: rgb(17, 255, 0);
+}
