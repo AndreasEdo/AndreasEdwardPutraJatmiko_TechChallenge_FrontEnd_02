@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    /* menengahkan container */
+    position: relative;
+
+    /* menengahkan element di dalamnya*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* ngerapiin */
+    padding: 1%;
+    box-sizing: border-box;
+
+    /* ukuran container */
+    width: 30vw;
+    height: 50vh;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.items{
+    position: relative;
+    box-sizing: border-box;
+    width:100%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 1vh;
+}
+
+.items >div.active{
+    opacity: 1;
+}
+.items > .item-1, .items > .item-2, .items > .item-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 4vh;
+    
+    background-color: rgb(209, 204, 204);
+    opacity: 0;
+}
+
+.arrow{
+    position: absolute;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.arrow >button{
+    color: white;
+    border: none;
+    background: none;
+
+    width:10%;
+    height:100%;
+    font-size:  2em;
+    cursor: pointer;
+}
+
+
+.marker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+    width:100%;
+    height: 2%;
+}
+
+.marker >div{
+    width:1.5%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.marker >div.active-marker{
+    background-color: rgb(77, 202, 231);
+}
+
+
+
+
