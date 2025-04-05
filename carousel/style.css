@@ -33,33 +33,41 @@ main{
 
 
 .items{
+    /*kasih lebar ama tinggi dan position relative buat nanti itemnya absolute biar tidak mencar mencar elementnya*/
     position: relative;
     box-sizing: border-box;
     width:100%;
     height: 98%;
+
+    /* menengahkan elemen */
     display: flex;
     justify-content: center;
     align-items: center;
     
+    /* kasih jarak sama yang bawah */
     margin-bottom: 1vh;
 }
 
 .items >div.active{
+    /* yang aktif opacity jadi satu */
     opacity: 1;
 }
 .items > .item-1, .items > .item-2, .items > .item-3{
+    /* position absolute  agar bisa mengikuti parentnya sama buat ngatur width dan height*/
     position: absolute;
     width: 100%;
     height: 100%;
     
+    /* Untuk desain isinya */
     display: flex;
     justify-content: center;
     align-items: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     font-size: 4vh;
-    
     background-color: rgb(209, 204, 204);
+
+    /* Opacity biar nanti hilang semua biar yang aktif saja yang terlihat sama transition biar smooth aja waktu ganti slide */
     opacity: 0;
     transition: 500ms opacity ease-in-out;
 }
@@ -67,15 +75,17 @@ main{
 .arrow{
     position: absolute;
     
+    /* Menengahkan panahnya sama dikasih space beetween biar nyebar pojok -pojok */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    /* width 100% sama border box biar nanti tidak overflow untuk elementnya*/
     width: 100%;
     box-sizing: border-box;
 }
 
-.arrow >button{
+.arrow >button{/* desain buttonnya */
     color: white;
     border: none;
     background: none;
@@ -87,7 +97,7 @@ main{
 }
 
 
-.marker{
+.marker{/* desain markernya */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,14 +106,14 @@ main{
     height: 2%;
 }
 
-.marker >div{
+.marker >div{/* kalau tidak aktif backgroudn abu abu */
     width:1.5%;
     height: 100%;
     border-radius: 50%;
     background-color: gray;
 }
 
-.marker >div.active-marker{
+.marker >div.active-marker{/* kalau aktif background biru */
     background-color: rgb(77, 202, 231);
 }
 
