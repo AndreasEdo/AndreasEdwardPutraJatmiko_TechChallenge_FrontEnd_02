@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+
+    width: 30%;
+    height: 20%;
+    background-image: linear-gradient(to bottom right, rgb(92, 178, 206),rgb(142, 186, 123));
+    border-radius: 2vw;
+
+    box-shadow:-2vw 2vw 5vw gray;
+    gap: 0.5vw;
+    color: white;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.container >h1{
+    margin-bottom: 4vh;
+}
+
+.container > div{
+    text-align: center;
+}
+
+.container >div >h2{
+    font-size: 2vh;
+    color: rgb(225, 221, 221);
+}
